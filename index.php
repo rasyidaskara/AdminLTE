@@ -292,13 +292,7 @@
       <!--begin::App Content-->
       <div class="app-content">
         <!--begin::Container-->
-        <?php
-        if ($_GET['page'] == 'home') {
-          include 'template/home.php';
-        } elseif ($_GET['page'] == 'dosen') {
-          include 'dosen/insert.php';
-        };
-        ?>
+
         <!--end::Container-->
       </div>
       <!--end::App Content-->
