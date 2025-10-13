@@ -292,7 +292,9 @@
       <!--begin::App Content-->
       <div class="app-content">
         <!--begin::Container-->
-
+        <?php
+        include 'template/home.php';
+        ?>
         <!--end::Container-->
       </div>
       <!--end::App Content-->
