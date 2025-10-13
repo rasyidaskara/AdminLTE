@@ -295,7 +295,9 @@
         <?php
         if ($_GET['page'] == 'home') {
           include 'template/home.php';
-        }
+        } elseif ($_GET['page'] == 'jenis') {
+          include 'jenis_barang/jenis.php';
+        };
         ?>
         <!--end::Container-->
       </div>
