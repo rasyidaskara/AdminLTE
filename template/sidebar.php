@@ -11,7 +11,7 @@
                  class="brand-image opacity-75 shadow" />
              <!--end::Brand Image-->
              <!--begin::Brand Text-->
-             <span class="brand-text fw-light">SI Penjualan</span>
+             <span class="brand-text fw-light">SI Akademik</span>
              <!--end::Brand Text-->
          </a>
          <!--end::Brand Link-->
@@ -38,15 +38,15 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="index.php?page=jenis" class="nav-link active">
+                             <a href="index.php?page=dosen" class="nav-link active">
                                  <i class="nav-icon bi bi-circle"></i>
-                                 <p>Jenis Barang</p>
+                                 <p>Data Dosen</p>
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="./index2.html" class="nav-link">
+                             <a href="index.php?peg=mahasiswa" class="nav-link">
                                  <i class="nav-icon bi bi-circle"></i>
-                                 <p>Dashboard v2</p>
+                                 <p>Mahasiswa</p>
                              </a>
                          </li>
                          <li class="nav-item">
