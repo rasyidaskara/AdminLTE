@@ -293,7 +293,9 @@
       <div class="app-content">
         <!--begin::Container-->
         <?php
-        //include 'template/home.php';
+        if ($_GET['page'] == 'home') {
+          include 'template/home.php';
+        }
         ?>
         <!--end::Container-->
       </div>

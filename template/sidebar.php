@@ -2,7 +2,8 @@
      <!--begin::Sidebar Brand-->
      <div class="sidebar-brand">
          <!--begin::Brand Link-->
-         <a href="./index.html" class="brand-link">
+         <!-- Untuk memanggil halaman home -->
+         <a href="index.php?page=home" class="brand-link">
              <!--begin::Brand Image-->
              <img
                  src="./assets/img/AdminLTELogo.png"
@@ -37,9 +38,9 @@
                      </a>
                      <ul class="nav nav-treeview">
                          <li class="nav-item">
-                             <a href="./index.html" class="nav-link active">
+                             <a href="index.php?page=jenis" class="nav-link active">
                                  <i class="nav-icon bi bi-circle"></i>
-                                 <p>Dashboard v1</p>
+                                 <p>Jenis Barang</p>
                              </a>
                          </li>
                          <li class="nav-item">
