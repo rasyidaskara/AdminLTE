@@ -294,16 +294,13 @@
       if ($_GET['page'] == 'dosen') {
         include 'dosen/insert.php';
       } elseif ($_GET['page'] == 'dosen_tangkap') {
-        $nidn = $_POST['nidn'];
-        $nama = $_POST['nama'];
-        $gender = $_POST['gender'];
-        $hp = $_POST['hp'];
-        echo $nidn . "<br>";
-        echo $nama . "<br>";
-        echo $gender . "<br>";
-        echo $hp . "<br>";
+        include 'dosen/simpan.php';
+
       } elseif ($_GET['page'] == 'mahasiswa') {
         include 'mahasiswa/insert.php';
+      } elseif ($_GET['page'] == 'mahasiswa_tangkap') {
+        include 'mahasiswa/simpan.php';
+        
       } else {
         include "template/home.php";
       }

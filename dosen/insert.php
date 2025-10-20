@@ -63,7 +63,7 @@
                             <div class="col-md-6">
                                 <label for="validationCustom05" class="form-label">No.Telp/HP<span class="required-indicator sr-only"> (required)</span></label>
                                 <input type="text" class="form-control" id="validationCustom05"
-                                    required="" name="hp" id="hp">
+                                    required="" name="no_hp" id="no_hp">
                                 <div class="invalid-feedback">Please provide a valid zip.</div>
                             </div>
                             <!--end::Col-->
