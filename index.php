@@ -290,13 +290,24 @@
       </div>
       <!--end::App Content Header-->
       <!--begin::App Content-->
-      <div class="app-content">
-        <!--begin::Container-->
-        <?php
-        include 'template/home.php';
-        ?>
-        <!--end::Container-->
-      </div>
+      <?php
+      if ($_GET['page'] == 'dosen') {
+        include 'dosen/insert.php';
+      } elseif ($_GET['page'] == 'dosen_tangkap') {
+        $nidn = $_POST['nidn'];
+        $nama = $_POST['nama'];
+        $gender = $_POST['gender'];
+        $hp = $_POST['hp'];
+        echo $nidn . "<br>";
+        echo $nama . "<br>";
+        echo $gender . "<br>";
+        echo $hp . "<br>";
+      } elseif ($_GET['page'] == 'mahasiswa') {
+        include 'mahasiswa/insert.php';
+      } else {
+        include "template/home.php";
+      }
+      ?>
       <!--end::App Content-->
     </main>
     <!--end::App Main-->

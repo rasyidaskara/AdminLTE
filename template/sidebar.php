@@ -44,7 +44,7 @@
                              </a>
                          </li>
                          <li class="nav-item">
-                             <a href="index.php?peg=mahasiswa" class="nav-link">
+                             <a href="index.php?page=mahasiswa" class="nav-link">
                                  <i class="nav-icon bi bi-circle"></i>
                                  <p>Mahasiswa</p>
                              </a>
