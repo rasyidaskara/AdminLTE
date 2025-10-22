@@ -262,9 +262,7 @@
     </nav>
     <!--end::Header-->
     <!--begin::Sidebar-->
-    <?php
-    include 'template/sidebar.php';
-    ?>
+    <?php include 'template/sidebar.php'; ?>
     <!--end::Sidebar-->
     <!--begin::App Main-->
     <main class="app-main">
@@ -290,21 +288,21 @@
       </div>
       <!--end::App Content Header-->
       <!--begin::App Content-->
-      <?php
-      if ($_GET['page'] == 'dosen') {
-        include 'dosen/insert.php';
-      } elseif ($_GET['page'] == 'dosen_tangkap') {
-        include 'dosen/simpan.php';
-
-      } elseif ($_GET['page'] == 'mahasiswa') {
-        include 'mahasiswa/insert.php';
-      } elseif ($_GET['page'] == 'mahasiswa_tangkap') {
-        include 'mahasiswa/simpan.php';
-        
-      } else {
-        include "template/home.php";
-      }
-      ?>
+      <div class="app-content">
+        <!--begin::Container-->
+        <?php
+        if ($_GET['page'] == 'dosen') {
+          include 'dosen/insert.php';
+        } elseif ($_GET['page'] == 'dosen_tangkap') {
+          include 'dosen/simpan.php';
+        } elseif ($_GET['page'] == 'mahasiswa') {
+          echo "Halaman Mahasiswa";
+        } else {
+          include 'template/home.php';
+        }
+        ?>
+        <!--end::Container-->
+      </div>
       <!--end::App Content-->
     </main>
     <!--end::App Main-->

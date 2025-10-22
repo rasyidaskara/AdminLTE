@@ -32,7 +32,7 @@
                      <a href="#" class="nav-link active">
                          <i class="nav-icon bi bi-speedometer"></i>
                          <p>
-                             Dashboard
+                             Data Master
                              <i class="nav-arrow bi bi-chevron-right"></i>
                          </p>
                      </a>
