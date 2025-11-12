@@ -1,7 +1,12 @@
 <!doctype html>
 <html lang="en">
 <!--begin::Head-->
-<?php session_start(); ?>
+<?php
+session_start();
+if (!isset($_SESSION['ses_nama'])) {
+  header('Location:index.php');
+}
+?>
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -221,7 +226,7 @@
                 src="./assets/img/user2-160x160.jpg"
                 class="user-image rounded-circle shadow"
                 alt="User Image" />
-              <span class="d-none d-md-inline">Alexander Pierce</span>
+              <span class="d-none d-md-inline"><?= $_SESSION['ses_nama']; ?></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
               <!--begin::User Image-->
@@ -265,7 +270,12 @@
     <!--end::Header-->
     <!--begin::Sidebar-->
     <?php
-    include 'template/sidebar.php';
+    if ($_SESSION['ses_akses'] == "DOS") {
+      include 'template/sidebar.php';
+    } elseif ($_SESSION['ses_akses'] == "MHS") {
+      include 'template/sidebar_mahasiswa.php';
+    }
+
     ?>
     <!--end::Sidebar-->
     <!--begin::App Main-->

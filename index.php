@@ -24,7 +24,7 @@
   <!--begin::Accessibility Features-->
   <!-- Skip links will be dynamically added by accessibility.js -->
   <meta name="supported-color-schemes" content="light dark" />
-  <link rel="preload" href="./css/adminlte.css" as="style" />
+  <link rel="preload" href="css/adminlte.css" as="style" />
   <!--end::Accessibility Features-->
   <!--begin::Fonts-->
   <link
@@ -48,7 +48,7 @@
     crossorigin="anonymous" />
   <!--end::Third Party Plugin(Bootstrap Icons)-->
   <!--begin::Required Plugin(AdminLTE)-->
-  <link rel="stylesheet" href="./css/adminlte.css" />
+  <link rel="stylesheet" href="css/adminlte.css" />
   <!--end::Required Plugin(AdminLTE)-->
 </head>
 <!--end::Head-->
@@ -57,7 +57,7 @@
 <body class="login-page bg-body-secondary">
   <div class="login-box">
     <div class="login-logo">
-      <a href="../index2.html"><b>Admin</b>LTE</a>
+      <a href="../index2.html"><b>Halaman Login</b>User</a>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -65,11 +65,17 @@
         <p class="login-box-msg">Sign in to start your session</p>
         <form action="user/cekuser.php" method="post">
           <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Email" name="email" />
+            <input type="email"
+              class="form-control"
+              placeholder="Email"
+              name="email" />
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
           </div>
           <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Password" name="pswd" />
+            <input type="password"
+              class="form-control"
+              placeholder="Password"
+              name="pswd" />
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
           </div>
           <!--begin::Row-->
@@ -90,20 +96,6 @@
           </div>
           <!--end::Row-->
         </form>
-        <div class="social-auth-links text-center mb-3 d-grid gap-2">
-          <p>- OR -</p>
-          <a href="#" class="btn btn-primary">
-            <i class="bi bi-facebook me-2"></i> Sign in using Facebook
-          </a>
-          <a href="#" class="btn btn-danger">
-            <i class="bi bi-google me-2"></i> Sign in using Google+
-          </a>
-        </div>
-        <!-- /.social-auth-links -->
-        <p class="mb-1"><a href="forgot-password.html">I forgot my password</a></p>
-        <p class="mb-0">
-          <a href="register.html" class="text-center"> Register a new membership </a>
-        </p>
       </div>
       <!-- /.login-card-body -->
     </div>

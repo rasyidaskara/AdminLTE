@@ -1,21 +1,26 @@
 <?php
-// Berfungsi untu memanggil fungsi session
+// untuk mendeklarasikan session
 session_start();
+
+// untuk mengambil file koneksi database
 include_once('../koneksi.php');
 
-// Variabel untuk menangkap data dari form login
+// mendefinisikan variable untuk menangkap nilai atau data
+// user dan password yang dikirim oleh form/halaman login
 $email  = $_POST['email'];
 $pswd   = $_POST['pswd'];
 
-// Cek apakah data yang diinput terdaftar atau tidak
-$cek = "SELECT * FROM tbl_user WHERE 
-        email='$email' AND 
-        pswd=SHA1('$pswd') ";
-$hasil = mysqli_query($mysqli, $cek);
-while ($_hasil = mysqli_fetch_array($hasil)) {
-    // untuk mendefinisikan session
-    $_SESSION['ses_nama']   = $_hasil['nama'];
-    $_SESSION['ses_email']  = $_hasil['email'];
-    // untuk mengalihkan ke halaman dashboard
+// membuat query untuk proses pengecekan email dan password;
+$sql = "SELECT * FROM tbl_user WHERE
+        email ='$email' AND
+        pswd = SHA1('$pswd') ";
+$hasil = mysqli_query($mysqli, $sql);
+
+while ($hasil =  mysqli_fetch_array($hasil)) {
+    // untuk membuat session
+    $_SESSION['ses_nama']   = $hasil['nama'];
+    $_SESSION['ses_email']  = $hasil['email'];
+    $_SESSION['ses_akses']      = $hasil['akses'];
+    //untuk mengarahkan ke halamana utama
     header('Location:../app.php?page=home');
 }
