@@ -20,7 +20,9 @@ while ($hasil =  mysqli_fetch_array($hasil)) {
     // untuk membuat session
     $_SESSION['ses_nama']   = $hasil['nama'];
     $_SESSION['ses_email']  = $hasil['email'];
-    $_SESSION['ses_akses']      = $hasil['akses'];
+    // Menentukan modul apa yang harus ditampilkan
+    // pada halaman dashboard
+    $_SESSION['ses_akses']  = $hasil['akses'];
     //untuk mengarahkan ke halamana utama
     header('Location:../app.php?page=home');
 }
