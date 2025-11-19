@@ -46,10 +46,10 @@ function postmethod()
     $nama   = $_GET["nama"];
     $gender = $_GET["gender"];
     $no_hp  = $_GET["no_hp"];
-    echo $nidn;
-    echo $nama;
-    echo $gender;
-    echo $no_hp;
+    // echo $nidn;
+    // echo $nama;
+    // echo $gender;
+    // echo $no_hp;
     $sql = "INSERT INTO dosen(nidn,nama,gender,no_hp) 
             VALUES ('$nidn' , '$nama', '$gender','$no_hp')";
     if (mysqli_query($mysqli, $sql)) {
