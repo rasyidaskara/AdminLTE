@@ -38,24 +38,21 @@ function getmethod()
         echo '{"result": "no data found"}';
     }
 }
-//data insert part are here
+
 function postmethod()
 {
     include_once('../koneksi.php');
     $nidn   = $_GET['nidn'];
-    $nama   = $_GET["nama"];
-    $gender = $_GET["gender"];
-    $no_hp  = $_GET["no_hp"];
-    // echo $nidn;
-    // echo $nama;
-    // echo $gender;
-    // echo $no_hp;
-    $sql = "INSERT INTO dosen(nidn,nama,gender,no_hp) 
-            VALUES ('$nidn' , '$nama', '$gender','$no_hp')";
+    $nama   = $_GET['nama'];
+    $gender = $_GET['gender'];
+    $no_hp  = $_GET['no_hp'];
+
+    $sql = "INSERT INTO dosen(nidn,nama,gender,no_hp)
+    VALUES ('$nidn','$nama','$gender','$no_hp')";
     if (mysqli_query($mysqli, $sql)) {
-        echo '{"result": "data inserted"}';
+        echo '{"result":"data inserted"';
     } else {
-        echo '{"result": "data not inserted"}';
+        echo '{"result": "data not inserted"';
     }
 }
 
@@ -69,7 +66,7 @@ function putmethod($data)
 
     $sql = "UPDATE dosen SET name='$name', email='$email', created_at=NOW() where id='$id'  ";
 
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($mysqli, $sql)) {
         echo '{"result": "Update Succesfully"}';
     } else {
 
@@ -86,7 +83,7 @@ function deletemethod($data)
 
     $sql = "DELETE FROM dosenz where id=$id";
 
-    if (mysqli_query($conn, $sql)) {
+    if (mysqli_query($mysqli, $sql)) {
         echo '{"result": "delete Succesfully"}';
     } else {
 
