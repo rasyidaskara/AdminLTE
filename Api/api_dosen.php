@@ -25,10 +25,12 @@ switch ($request) {
 //data read part are here
 function getmethod()
 {
+    // Koneksi database
     include_once('../koneksi.php');
-    $sql = "SELECT * FROM dosen";
+    $sql = "SELECT * FROM dosen order by nama";
     $result = mysqli_query($mysqli, $sql);
     if (mysqli_num_rows($result) > 0) {
+        // Jika data tidak kosong
         $rows = array();
         while ($r = mysqli_fetch_assoc($result)) {
             $rows["result"][] = $r;
